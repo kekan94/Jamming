@@ -1,4 +1,28 @@
 .track {
-    position: relative !important;
-    left: 0
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 0.25rem solid black;
+    border-radius: 4rem;
+}
+
+.trackInfo {
+    margin: 0 auto;
+}
+
+a {
+    color: white;
+}
+
+.line {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.TrackAction {
+    background: transparent;
+    padding-left: 0.5rem;
+    font-size: 2rem;
+    border-left: 0.25rem solid black;
 }

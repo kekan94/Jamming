@@ -1,0 +1,66 @@
+.tracks {
+    display: grid;
+    grid: "a b";
+    width: 650px;
+}
+
+.track {
+    width: 350px;
+    grid-area: a;
+}
+
+li {
+    list-style-type: none;
+}
+
+.buttonDiv {
+    grid-area: b;
+    padding: 35px 0;
+}
+
+.playlistChooser {
+    position: absolute;
+    background-color: #282C34;
+    color: #61DAFB;
+    box-sizing: border-box;
+    width: 227.25px;
+    margin-top: 5px;
+    padding: 5px;
+    border: 2px solid #61DAFB;
+    border-radius: 15px;
+}
+
+.playlistChooser h3 {
+    margin-top: 0;
+}
+
+.playlistChooser ul {
+    padding: 0;
+}
+
+.playlistChooser li {
+    list-style-type: none;
+}
+
+.buttonOne, .buttonTwo {
+    background-color: #282C34;
+    color: #61DAFB;
+    box-sizing: border-box;
+    width: 200px;
+    padding: 0 20px;
+    border: 2px solid #61DAFB;
+    border-radius: 15px;
+}
+
+.buttonOne:active, .buttonTwo:active {
+    background-color:  #61DAFB;
+    color:  #282C34;
+}
+
+.buttonOneInputOne, .buttonOneInputTwo {
+    display: inline-block;
+}
+
+.buttonOneInputOne {
+    width: 120px;
+}

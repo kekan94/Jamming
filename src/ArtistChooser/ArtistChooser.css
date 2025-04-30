@@ -1,0 +1,44 @@
+#artist {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    border: none;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    background-color: black;
+    display: block;
+}
+
+#artist p {
+    position: relative;
+    top: 50%;
+    height: 3rem;
+    width: 30rem;
+    background-color: var(--background-color);
+    border: 0.15rem solid var(--color);
+    border-radius: 0.5rem;
+}
+
+#artist input {
+    font-size: 2rem;
+    background-color: var(--background-color);
+    height: 2.5rem;
+    padding: 0;
+    position: relative;
+    top: -0.25rem;
+}
+
+#artist input:active {
+    border: 2px solid var(--color);
+    color: white;
+    background-color: var(--background-color);
+}
+
+#artist button {
+    font-size: 2rem;
+    height: 2.5rem;
+    padding: 0;
+    margin-top: 0.5rem;
+}

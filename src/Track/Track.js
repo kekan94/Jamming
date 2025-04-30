@@ -1,56 +1,41 @@
-import React from "react";
+import React, { useCallback } from "react";
+
 import "./Track.css";
 
-const tracks = [
-    {name: "Lose Yourself",
-    artist: "Eminem",
-    album:  "Lose Yourself",
-    id: "1"},
-    {name: "Not Afraid",
-    artist: "Eminem",
-    album:  "Lose Yourself",
-    id: "2"},
-    {name: "Down to the Ground",
-    artist: "Eminem",
-    album:  "Obnoxious",
-    id: "3"},
-    {name: "Old Yella",
-    artist: "McDonald",
-    album:  "Farm",
-    id: "4"},
-    {name: "Womanizer",
-    artist: "Britney Spears",
-    album:  "Baby One More Time",
-    id: "5"},
-    {name: "Baby One More Time",
-    artist: "Britney Spears",
-    album:  "Baby One More Time",
-    id: "6"},
-]
-
 function Track(props) {
+    const addTrack = useCallback(event => {
+        props.onAdd(props.track);
+    }, [props.onAdd, props.track]);
+
+    const removeTrack = useCallback(event => {
+        props.onRemove(props.track);
+    }, [props.onRemove, props.track]);
+
+    const renderAction = () => {
+        if (props.isRemoval) {
+            return (
+                <button className="TrackAction" onClick={removeTrack}>
+                    -
+                </button>
+            );
+        } else {
+            return (
+                <button className="TrackAction" onClick={addTrack}>
+                    +
+                </button>
+            )
+        }
+    }
+
     return (
         <div className="track">
-            {tracks.map(track => (
-                <>
-                    <h3>{track.name}</h3>
-                    <p>
-                        {track.artist} | {track.album}
-                        <span>
-                            <button /*onAdd={handleChange}*/>
-                                Add the song to Playlist
-                                <select>
-                                    <option>Playlist 1</option>
-                                    <option>Playlist 2</option>
-                                </select>
-                            </button>
-                        </span>
-                    </p>
-                </>
-            ))
-            }
+            <div className="trackInfo">
+                <h3><a href={props.track.url} target="_blank">{props.track.name}</a></h3>
+                <p>{props.track.artist} <span className="line">|</span> {props.track.album}</p>
+            </div>
+            {renderAction()}
         </div>
-    );
+    )
 }
 
 export default Track;

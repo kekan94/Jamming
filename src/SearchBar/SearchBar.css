@@ -1,0 +1,31 @@
+.paragraph {
+    margin: 1rem auto;
+    width: 20rem;
+    border: 0.15rem solid var(--color);
+    border-radius: 4rem;
+    background-color: var(--background-color);
+    opacity: 0.75;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.paragraph input {
+    margin: 0.5rem 0;
+    border: none;
+    color: white;
+    background: transparent;
+    outline: 0;
+}
+
+.paragraph input:active {
+    border: 2px solid var(--color);
+    color: white;
+    background-color: var(--background-color);
+}
+
+button {
+    border: none;
+    color: white;
+    background-color: var(--background-color);
+}
